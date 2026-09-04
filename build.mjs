@@ -2,7 +2,12 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 import { dirname } from 'node:path';
 
-const bundle = JSON.parse(await readFile(new URL('./bundle.json', import.meta.url), 'utf8'));
+const parts = [];
+for (let i = 0; i < 8; i++) {
+  const suffix = String(i).padStart(2, '0');
+  parts.push(await readFile(new URL(`./bundle.part.${suffix}`, import.meta.url), 'utf8'));
+}
+const bundle = JSON.parse(parts.join(''));
 const outDir = new URL('./dist/', import.meta.url);
 await mkdir(outDir, { recursive: true });
 
