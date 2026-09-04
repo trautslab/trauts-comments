@@ -6,19 +6,30 @@ El proyecto contiene un banco de 270 preguntas autocorregibles, incluyendo ejerc
 
 ## Build
 
-Los assets de la aplicación se guardan comprimidos en `bundle.json`. El build los reconstruye en `dist/`:
+Para poder transferir la aplicación completa mediante la integración de GitHub, los assets estáticos están comprimidos y divididos en `bundle.part.00` … `bundle.part.07`. `build.mjs` los une, descomprime y reconstruye byte por byte en `dist/`:
 
 ```bash
 npm run build
 ```
 
+El build genera:
+
+- `index.html`
+- `styles.css`
+- `app.js`
+- `data.json`
+- `manifest.webmanifest`
+- `sw.js`
+- `_headers`
+- `icon.svg`
+
 ## Cloudflare Pages
 
 - Production branch: `main`
+- Framework preset: `None`
 - Build command: `npm run build`
 - Build output directory: `dist`
-- Framework preset: `None`
 
-La v1 no requiere backend ni variables de entorno. El progreso se almacena en `localStorage` del navegador.
+La v1 no requiere backend, secretos ni variables de entorno. El progreso se almacena en `localStorage` del navegador.
 
 > La guía PDF utilizada es material de preparación y no un solucionario oficial de la UNI.
