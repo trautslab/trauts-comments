@@ -2,7 +2,7 @@
 
 Aplicación mobile-first/PWA para practicar el Examen de Suficiencia de Inglés de la Universidad Nacional de Ingeniería (Lima, Perú).
 
-El proyecto contiene un banco de 270 preguntas autocorregibles, incluyendo ejercicios recuperados de la guía de preparación UNI y ejercicios adicionales A2–B1/B1+, además de diagnóstico, práctica por tema, reading, revisión de errores y simulacro.
+El proyecto contiene un banco de 300 preguntas autocorregibles, incluyendo ejercicios recuperados de la guía de preparación UNI, ejercicios vistos en el proyecto y ejercicios adicionales A2–B1/B1+, además de diagnóstico, práctica por tema, reading, repaso intensivo, revisión de errores y simulacro.
 
 ## Build
 
